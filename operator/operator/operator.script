@@ -707,10 +707,11 @@ function init(self)
     this = msg.url('#'),
     camera = msg.url('camera')
   }
-
+  -- Bazi Ma Be Zoom Niyaz Nadare
+  -- -Alii
   self.bindings = {
-    zoom_in = hashes.mouse_wheel_up,
-    zoom_out = hashes.mouse_wheel_down,
+    --zoom_in = hashes.mouse_wheel_up,
+    --zoom_out = hashes.mouse_wheel_down,
   }
 
   self.is_rotation_continious = {
@@ -779,12 +780,13 @@ function on_input(self, action_id, action)
   end
 
   local input = { }
-
+  --[[
   if action_id == self.bindings.zoom_in then
     input.zoom = -1
   elseif action_id == self.bindings.zoom_out then
     input.zoom = 1
-  end
+  end]]--
+-- Zoom Nadarim | -Alii
 
   if action.screen_dx and action.screen_dy and not action_id then
     if self.did_initial_screen_movement then
